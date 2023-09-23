@@ -1,6 +1,6 @@
 {
   "name": "osrmscript",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "One of the easiest codes ever! (OverSimplified Runnable Makefile - Javascript)",
   "main": "osrmscript.js",
   "scripts": {
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/HotdoGuy90/osrmscript/issues"
   },
-  "homepage": "https://github.com/HotdoGuy90/osrmscript#readme"
+  "homepage": "https://github.com/HotdoGuy90/osrmscript#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
