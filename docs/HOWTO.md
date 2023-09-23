@@ -6,7 +6,7 @@ This doc will show you all of the functions in Osrmscript.
 
 You can print any screen by typing:
 
-```text
+```makefile
 // outputs with "Hello World"!
 say: "Hello World!";
 ```
@@ -28,13 +28,13 @@ In this example, Osrmscript is asking for an input, and it is using "Enter your 
 
 Assigning a variable goes like:
 
-```text
+```Makefile
 let ~var~ = "Hello World!";
 ```
 
 And you can use it like:
 
-```text
+```Makefile
 say: ~var~
 ```
 
@@ -45,7 +45,7 @@ NOTE: MAKE SURE THE VARIABLE IS IN TILDE (~) OR ELSE IT WON'T WORK
 
 The only way to run/read Osrmscript code is with NodeJS. Assuming you have downloaded the Osrmscript package then you can do the following:
 
-```node
+```javascript
 const osrmscript = require('osrmscript');
 
 var code = 'YOUR OSRMSCRIPT CODE HERE';
@@ -54,7 +54,7 @@ osrmscript.runOsrmscript(code);
 
 And then replace 'YOUR OSRMSCRIPT CODE HERE' with actual Osrmscript code. I must warn you though, as runOsrmscript() uses eval() to run the code. If you want it only to return the javascript ocde, type:
 
-```node
+```javascript
 const osrmscript = require('osrmscript');
 
 var code = 'YOUR OSRMSCRIPT CODE HERE';
@@ -65,7 +65,7 @@ var jsCode = osrmscript.translateToJavascript(code);
 
 This does not work yet, but I plan on adding a new function. I am thinking it goes like:
 
-```node
+```javascript
 const osrmscript = require('osrmscript');
 
 var fileName = '/path/to/file/filename.osrm'
