@@ -61,9 +61,9 @@ var code = 'YOUR OSRMSCRIPT CODE HERE';
 var jsCode = osrmscript.translateToJavascript(code);
 ```
 
-## How to: Read a .osrm file (Currently Unavailable)
+## How to: Read a .osrm file
 
-This does not work yet, but I plan on adding a new function. I am thinking it goes like:
+As of the newest update 1.3.0 reading a .osrm file actually works! Tt goes like:
 
 ```javascript
 const osrmscript = require('osrmscript');
@@ -72,4 +72,4 @@ var fileName = '/path/to/file/filename.osrm'
 var jsCode = osrmscript.translateFileToJavascript(fileName)
 ```
 
-Then that way it will feel much easier. You can recreate this with the 'fs' package.
+Then that way it is feel much easier.
