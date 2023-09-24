@@ -1,0 +1,3 @@
+let ~myVar~ = "1";
+let ~num~ = int: ~myVar~;
+say: ~num~;
