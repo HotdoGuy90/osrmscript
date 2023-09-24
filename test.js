@@ -1,4 +1,4 @@
+var osrmscript = require('osrmscript');
 
-
-const osrmscriptCode = `say: "Hello World!"`;
-console.log(osrmscript.runOsrmScript(osrmscriptCode));
+var code = 'say: "Hello World!"'
+osrmscript.runOsrmscript(code)
