@@ -1,3 +1,3 @@
-let ~myVar~ = "1";
-let ~num~ = int: ~myVar~;
-say: ~num~;
+let ~myVar~ = ask: "Enter a number: ";
+int: ~myVar~;
+say: ~myVar~;
