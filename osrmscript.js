@@ -1,3 +1,5 @@
+var fs = require('fs')
+
 // osrmscript.js
 function translateToJavaScript(osrmscriptCode) {
     // Replace "say: " with "console.log("
@@ -27,6 +29,9 @@ function translateToJavaScript(osrmscriptCode) {
     osrmscriptCode = osrmscriptCode.replace(/TRUE/g, 'true');
     osrmscriptCode = osrmscriptCode.replace(/FALSE/g, 'false');
     osrmscriptCode = osrmscriptCode.replace(/NOTHING/g, 'null');
+
+    // Replace typecasting assignment "int: ~var~" with "let var = Number(var)"
+    osrmscriptCode = osrmscriptCode.replace(/int:\s*(\w+)\s*=\s*~([^~]+)~/g, 'let $1 = Number($2)');
     
     // Add semicolon at the end if missing
     return osrmscriptCode.endsWith(';') ? osrmscriptCode : osrmscriptCode + ';';
@@ -36,8 +41,14 @@ function runOsrmscript(osrmscriptCode) {
     const javascriptCode = translateToJavaScript(osrmscriptCode);
     eval(javascriptCode); // Execute the JavaScript code
 }
-  
+
+function translateFileToJavascript(fileName) {
+    var file = fs.readFileSync(fileName, 'utf-8');
+    return translateToJavaScript(String(file));
+}
+
 module.exports = {
     runOsrmscript,
-    translateToJavaScript
+    translateToJavaScript,
+    translateFileToJavascript
 };
