@@ -74,6 +74,8 @@ var jsCode = osrmscript.translateFileToJavascript(fileName)
 
 Then that way it is much easier.
 
+NOTE: It doesn't run by itself. You can make it run using the eval() method.
+
 ## How to: Typecast to int
 
 To do this type:
