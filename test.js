@@ -1,4 +1,4 @@
 var osrmscript = require('osrmscript');
 
-var code = 'say: "Hello World!"'
-osrmscript.runOsrmscript(code)
+var code = osrmscript.translateFileToJavascript('./test.osrm');
+eval(code);
