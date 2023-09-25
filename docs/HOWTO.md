@@ -79,6 +79,7 @@ Then that way it is much easier.
 To do this type:
 
 ```makefile
+// Assigns itself to the integer version of itself
 int: ~var~
 ```
 
