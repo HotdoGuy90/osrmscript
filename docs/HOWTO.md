@@ -28,13 +28,13 @@ In this example, Osrmscript is asking for an input, and it is using "Enter your 
 
 Assigning a variable goes like:
 
-```Makefile
+```makefile
 let ~var~ = "Hello World!";
 ```
 
 And you can use it like:
 
-```Makefile
+```makefile
 say: ~var~
 ```
 
@@ -63,7 +63,7 @@ var jsCode = osrmscript.translateToJavascript(code);
 
 ## How to: Read a .osrm file
 
-As of the newest update 1.3.0 reading a .osrm file actually works! Tt goes like:
+As of the newest update 1.3.2 reading a .osrm file actually works! It goes like:
 
 ```javascript
 const osrmscript = require('osrmscript');
@@ -72,4 +72,14 @@ var fileName = '/path/to/file/filename.osrm'
 var jsCode = osrmscript.translateFileToJavascript(fileName)
 ```
 
-Then that way it is feel much easier.
+Then that way it is much easier.
+
+## How to: Typecast to int
+
+To do this type:
+
+```makefile
+int: ~var~
+```
+
+NOTE: When using this method, it ONLY works for variables. When typecasting, you have to give it a line, because it assigns Itself to an integer. For example: `makefile int: ~var~` is the same as: `javascript let var = Number(var);`
