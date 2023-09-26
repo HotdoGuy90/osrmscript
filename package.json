@@ -1,6 +1,6 @@
 {
   "name": "osrmscript",
-  "version": "1.3.3",
+  "version": "2.0.4",
   "description": "One of the easiest codes ever! (OverSimplified Runnable Makefile - Javascript)",
   "main": "osrmscript.js",
   "scripts": {
@@ -20,6 +20,9 @@
   ],
   "author": "HotdoGuy90",
   "license": "ISC",
+  "bin": {
+    "osrmscript": "/cmd1/index.js"
+  }
   "bugs": {
     "url": "https://github.com/HotdoGuy90/osrmscript/issues"
   },
