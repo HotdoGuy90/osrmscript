@@ -86,3 +86,19 @@ int: ~var~
 ```
 
 NOTE: When using this method, it ONLY works for variables. When typecasting, you have to give it a line, because it assigns Itself to an integer. For example: `makefile int: ~var~` is the same as: `javascript let var = Number(var);`
+
+## How to: Typecase to other datatypes (String and Float ONLY)
+
+For Strings type:
+
+```makefile
+//Typecasting to string
+str: ~var~
+```
+
+For Floats type:
+
+```makefile
+//Typecasting to float
+flt: ~var~
+```
