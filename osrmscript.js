@@ -26,12 +26,19 @@ function translateToJavaScript(osrmscriptCode) {
         return variableName; // Replace ~variableName~ with variableName
     });
 
-    osrmscriptCode = osrmscriptCode.replace(/TRUE/g, 'true');
-    osrmscriptCode = osrmscriptCode.replace(/FALSE/g, 'false');
+    osrmscriptCode = osrmscriptCode.replace(/YES/g, 'true');
+    osrmscriptCode = osrmscriptCode.replace(/NO/g, 'false');
     osrmscriptCode = osrmscriptCode.replace(/NOTHING/g, 'null');
 
     // Replace typecasting assignment "int: ~var~" with "let var = Number(var)"
     osrmscriptCode = osrmscriptCode.replace(/int:\s*(\w+)\s*=\s*~([^~]+)~/g, 'let $1 = Number($2)');
+
+    // Replace typecasting assignment "str: ~var~" with "let var = String(var)"
+    osrmscriptCode = osrmscriptCode.replace(/str:\s*(\w+)\s*=\s*~([^~]+)~/g, 'let $1 = String($2)');
+
+
+    // Replace typecasting assignment "flt: ~var~" with "let var = parseFloat(var)"
+    osrmscriptCode = osrmscriptCode.replace(/flt:\s*(\w+)\s*=\s*~([^~]+)~/g, 'let $1 = parseFloat($2)');
     
     // Add semicolon at the end if missing
     return osrmscriptCode.endsWith(';') ? osrmscriptCode : osrmscriptCode + ';';
