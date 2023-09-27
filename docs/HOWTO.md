@@ -102,3 +102,26 @@ For Floats type:
 //Typecasting to float
 flt: ~var~
 ```
+## How to: Use the brand new CLI
+
+Yes. I have finally finished it. Apparently it will not run with the update i had for Node JS. (That is because the minimum requirement for one of the modules the cli uses is at least Node 16, and my computer is too old to run that.)
+
+Okay so to run the CLI, type:
+
+```bash
+npx osrmscript
+```
+
+To run a .osrm file in the CLI type:
+
+```bash
+npx osrmscript run -f <filename>
+```
+
+but replace <filename> with the name of your file. You can even convert a .osrm file into a javascript file with:
+
+```bash
+npx osrmscript run -f <filename> -o output.js
+```
+
+but replace "output.js" with whatever you want the output file to be named.
