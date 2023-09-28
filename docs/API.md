@@ -2,7 +2,7 @@
 
 Yes, there is now an api. You can access it from the url: 
 ```
-https://runkit.io/hotdoguy90/osrmscript-api/1.0.3/?code=YOUROSRMSCRIPTCODEHERE
+https://runkit.io/hotdoguy90/osrmscript-api/1.1.0/?code=YOUROSRMSCRIPTCODEHERE
 ```
 
 Just replace YOUROSRMSCRIPTCODEHERE with your osrmscript code.
@@ -14,7 +14,7 @@ NOTE: make sure to remove alphanumeric characters from the url and replace them 
 ### The Command Line
 
 ```bash
-curl -L "https://runkit.io/hotdoguy90/osrmscript-api/1.0.3/?code=say%3A%20%22Hello%20World%21%22" && echo ""
+curl -L "https://runkit.io/hotdoguy90/osrmscript-api/1.1.0/?code=say%3A%20%22Hello%20World%21%22" && echo ""
 //outputs: console.log("Hello World!")
 ```
 
@@ -49,7 +49,7 @@ Javascript:
 function main() {
     var input = document.getElementById("coder");
     var output = document.getElementById("output");
-    var apiName = 'https://runkit.io/hotdoguy90/osrmscript-api/1.0.3/?code=' + encodeURIComponent(input.value);
+    var apiName = 'https://runkit.io/hotdoguy90/osrmscript-api/1.1.0/?code=' + encodeURIComponent(input.value);
     fetch(apiName)
         .then(response => response.text())
         .then(jsCode => output.innerHTML = jsCode);
@@ -76,7 +76,7 @@ import urllib.request
 import urllib.parse
 
 def translateToJavascript(usr_input):
-  apiname = "https://runkit.io/hotdoguy90/osrmscript-api/1.0.3/?code=" + urllib.parse.quote(usr_input)
+  apiname = "https://runkit.io/hotdoguy90/osrmscript-api/1.1.0/?code=" + urllib.parse.quote(usr_input)
   output = urllib.request.urlopen(apiname)
   jsCode = output.read().decode()
   return jsCode
@@ -100,4 +100,4 @@ for i in itertools.count():
     break
 ```
 
-By the way, the api maker i used to make it is [here](https://runkit.com), and the source code for the api is [here](https://runkit.com/hotdoguy90/osrmscript-api/1.0.3).
+By the way, the api maker i used to make it is [here](https://runkit.com), and the source code for the api is [here](https://runkit.com/hotdoguy90/osrmscript-api/1.1.0)
