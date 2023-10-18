@@ -15,7 +15,7 @@ NOTE: make sure to remove alphanumeric characters from the url and replace them 
 
 ```bash
 curl -L "https://runkit.io/hotdoguy90/osrmscript-api/1.1.0/?code=say%3A%20%22Hello%20World%21%22" && echo ""
-//outputs: console.log("Hello World!")
+#outputs: console.log("Hello World!")
 ```
 
 ### Javascript (Vanilla)
