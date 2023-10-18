@@ -70,7 +70,7 @@ NOTE: The code will not work unless you host it on a server and get an extension
 
 ### Python
 
-```python3
+```python
 import itertools
 import urllib.request
 import urllib.parse
