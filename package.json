@@ -1,0 +1,34 @@
+{
+  "name": "osrmscript",
+  "version": "2.0.7",
+  "description": "One of the easiest codes ever! (OverSimplified Runnable Makefile - Javascript)",
+  "main": "osrmscript.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HotdoGuy90/osrmscript.git"
+  },
+  "keywords": [
+    "Osrmscript",
+    "NodeJS",
+    "NPM",
+    "Makefile",
+    "Javascript",
+    "Python"
+  ],
+  "author": "HotdoGuy90",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HotdoGuy90/osrmscript/issues"
+  },
+  "bin": {
+    "osrmconvert": "bin/index.js"
+  },
+  "homepage": "https://github.com/HotdoGuy90/osrmscript#readme",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
